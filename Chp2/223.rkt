@@ -6,7 +6,7 @@
   (* x x))
 
 (define (accumulate op initial sequence)
-  (if (null? sequence) 
+  (if (null? sequence)
       initial
       (op (car sequence)
           (accumulate op initial (cdr sequence)))))
@@ -25,8 +25,7 @@
 ;; Nested map
 
 
-
-;; Exercise 
+;; Exercise
 ;; 2.33
 
 (define (my-map proc sequence)
@@ -38,7 +37,7 @@
 
 (define (my-length sequence)
   (accumulate (lambda (x y) (+ 1 y)) 0 sequence))
-                      
+
 
 ;; 2.34
 (define (horner-eval x coefficient-sequence)
@@ -47,4 +46,3 @@
                 (+ this-coeff (* x higher-terms)))
               0
               coefficient-sequence))
-
